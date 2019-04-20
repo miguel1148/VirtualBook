@@ -1,0 +1,15 @@
+
+Serviços a serem criados:
+Manter livro;
+Manter cliente;
+Reservar de livro;
+Cancelar reserva;
+Alugar livro;
+Devolução de livro;
+Dashboard com informações sobre:
+Livros a serem devolvidos no período semanal, com seus valores;
+Livros alugados no período semanal, com seus valores;
+
+OBS: Para o serviço de reserva, o livro será disponibilizado ao cliente em uma data
+ agendada (ou seja, um agendamento) enquanto no de aluguel do livro ele é 
+ disponibilizado no exato momento da solicitação.

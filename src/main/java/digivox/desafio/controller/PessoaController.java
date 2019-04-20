@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import digivox.desafio.model.Pessoa;
-import digivox.desafio.repository.GenericRepository;
+import digivox.desafio.repository.PessoaRepository;
 
 
 
@@ -16,7 +16,7 @@ public class PessoaController {
 	
 	
 	@Autowired
-	private GenericRepository pessoaRepository;
+	private PessoaRepository pessoaRepository;
 	
 	@RequestMapping(method = RequestMethod.GET, value="/cadastroPessoa")
 	public String inicio() {

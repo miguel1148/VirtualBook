@@ -11,8 +11,8 @@ import digivox.desafio.model.Pessoa;
 
 @Repository
 @Transactional
-public interface GenericRepository extends CrudRepository<Pessoa, Long>{
+public interface PessoaRepository extends CrudRepository<Pessoa, Long>{
 
-	void save(Livro livro);
+	
 
 }
