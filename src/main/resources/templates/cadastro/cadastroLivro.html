@@ -6,29 +6,33 @@
 <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
        <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.css"  media="screen,projection"/>
-      <link type="text/css" rel="stylesheet" href="materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="/materialize/css/materialize.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="/materialize.min.css"  media="screen,projection"/>
       
       
 </head>
 <body>
 
-	<form action="salvarLivro" method="post">
+	<form action="salvarLivro" method="post" th:object="${livroObj}">
 
-		<label>Nome</label> <input name="nome"> 
-		<label>Genero</label> <input name="genero"> 
+		<label>ID</label> 
+		<input name="id" th:field="*{id}" readonly="readonly">
+		<label>Nome</label> 
+		<input name="nome" th:field="*{nome}"> 
+		<label>Genero</label> 
+		<input name="genero" th:field="*{genero}"> 
 		<input type="submit" value="Salvar">
 	</form>
-	
+		
 	
 	<a href="/listaLivros">Listar</a>
 	<table>
 		<tr th:each = "livro : ${livros}">
-		<br/>
-		<td>COD :</td>
 		<td th:text = "${livro.id}"></td>
-		<td> NOME :</td><td th:text = "${livro.nome}"></td>
-		<td> GENERO :</td><td th:text = "${livro.genero}"></td>
+		<td th:text = "${livro.nome}"></td>
+		<td th:text = "${livro.genero}"></td>
+		
+		<td><a th:href="@{/alugarLivro/{idLivro}(idLivro=${livro.id})}">Editar</a> </td>
 		</tr>
 	</table>
 	
