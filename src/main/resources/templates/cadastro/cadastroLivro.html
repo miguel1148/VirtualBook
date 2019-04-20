@@ -3,6 +3,13 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+       <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="materialize.min.css"  media="screen,projection"/>
+      
+      
 </head>
 <body>
 
@@ -17,12 +24,16 @@
 	<a href="/listaLivros">Listar</a>
 	<table>
 		<tr th:each = "livro : ${livros}">
+		<br/>
+		<td>COD :</td>
 		<td th:text = "${livro.id}"></td>
-		<td th:text = "${livro.nome}"></td>
-		<td th:text = "${livro.genero}"></td>
+		<td> NOME :</td><td th:text = "${livro.nome}"></td>
+		<td> GENERO :</td><td th:text = "${livro.genero}"></td>
 		</tr>
 	</table>
 	
 	
+	<script type="text/javascript" src="materialize/js/materialize.js"></script>
+	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 </body>
 </html>

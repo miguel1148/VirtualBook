@@ -33,7 +33,7 @@ public class PessoaController {
 		
 	}
 	
-	/*
+	
 	@RequestMapping(method = RequestMethod.GET, value="/listapessoas")
 	public ModelAndView pessoas() {
 		ModelAndView view = new ModelAndView("cadastro/cadastroPessoa");
@@ -44,6 +44,6 @@ public class PessoaController {
 		
 	}
 	
-*/
+
 
 }
