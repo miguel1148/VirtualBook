@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+       <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="/materialize/css/materialize.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="/materialize.min.css"  media="screen,projection"/>
+      
+
+</head>
+<body>
+
+
+
+		<form action="salvarLivro" method="post" th:object="${livroObj}">
+
+		<label>ID</label> 
+		<input name="id" th:field="*{id}" readonly="readonly">
+		<label>Nome</label> 
+		<input name="nome" th:field="*{nome}" readonly="readonly"> 
+		<label>Genero</label> 
+		<input name="genero" th:field="*{genero}" readonly="readonly">
+		<label>Valor</label> 
+		<input name="valor" th:field="*{valor}" readonly="readonly">
+		<label>Cliente ID</label>
+		 
+		<input name="Cliente_ID" th:field="*{clienteId}"> 
+		Data Aquisicao: <input type="date" name="dataAquisicao" th:field="*{dataAquisicao}">
+		Data Entrega: <input type="date" name="dataEntrega" th:field="*{dataEntrega}">
+	
+	
+		<input type="submit" value="Salvar" a  class="waves-effect waves-light btn">
+		
+		<br/>
+		<br/>
+		<a class="waves-effect waves-light btn" href="/">inicio</a>
+	</form>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		
+		
+		
+<script type="text/javascript" src="materialize/js/materialize.js"></script>
+	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+		
+</body>
+</html>

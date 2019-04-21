@@ -15,11 +15,14 @@
 
 		<label>Nome</label> <input name="nome"> 
 		<label>Sobrenome</label> <input name="sobrenome"> 
-		<input type="submit" value="Salvar"> 
+		<input type="submit" value="Salvar" a  class="waves-effect waves-light btn"> 
 	</form>
 	
 	<br/>
 	<a class="waves-effect waves-light btn" href="/listapessoas">Listar</a>
+	<br/>
+	<br/>
+	<a class="waves-effect waves-light btn" href="/">Inicio</a>
 	<table>
 		<tr th:each = "pessoa : ${pessoas}">
 		<br/>
@@ -29,6 +32,7 @@
 		<td> SOBRENOME :</td><td th:text = "${pessoa.sobrenome}"></td>
 		</tr>
 	</table>
+	
 	
 	
 	<script type="text/javascript" src="materialize/js/materialize.js"></script>

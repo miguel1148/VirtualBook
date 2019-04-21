@@ -12,29 +12,56 @@
       
 </head>
 <body>
-
+	
+	<h1>ADD Livro</h1>
 	<form action="salvarLivro" method="post" th:object="${livroObj}">
 
 		<label>ID</label> 
 		<input name="id" th:field="*{id}" readonly="readonly">
+		Data Aquisicao: <input type="date" name="dataAquisicao" th:field="*{dataAquisicao}" readonly="readonly">
+		Data Entrega: <input type="date" name="dataEntrega" th:field="*{dataEntrega}" readonly="readonly">
 		<label>Nome</label> 
 		<input name="nome" th:field="*{nome}"> 
 		<label>Genero</label> 
-		<input name="genero" th:field="*{genero}"> 
-		<input type="submit" value="Salvar">
+		<input name="genero" th:field="*{genero}">
+		<label>Valor</label>
+		<input  name="valor" th:field="*{valor}">
+		<br/>
+		<br/>
+		
+		<input type="submit" value="Salvar" a  class="waves-effect waves-light btn">
+		<br/>
+		<br/>
 	</form>
 		
 	
-	<a href="/listaLivros">Listar</a>
+	
+	
+	<a class="waves-effect waves-light btn" href="/">Inicio</a>
+	<a class="waves-effect waves-light btn" href="/listaLivros">listar</a>
 	<table>
 		<tr th:each = "livro : ${livros}">
 		<td th:text = "${livro.id}"></td>
 		<td th:text = "${livro.nome}"></td>
 		<td th:text = "${livro.genero}"></td>
+		<td th:text = "${livro.clienteId}"></td>
+		<td th:text = "${livro.valor}"></td>
+		<td th:text = "${livro.dataAquisicao}"></td>
+		<td th:text = "${livro.dataEntrega}"></td>
 		
-		<td><a th:href="@{/alugarLivro/{idLivro}(idLivro=${livro.id})}">Editar</a> </td>
+		<td><a th:href="@{/cadastroLivro/{idLivro}(idLivro=${livro.id})}">EDITAR</a></td>
+		<td><a th:href="@{/alugarLivro/{idLivro}(idLivro=${livro.id})}">ALUGAR/DEVOLVER</a></td>
+		<td><a th:href="@{/removerLivro/{idLivro}(idLivro=${livro.id})}">EXCLUIR</a></td>
+		<td><a th:href="@{/devolverLivro/{idLivro}(idLivro=${livro.id})}">DEVOLUCAO</a></td>
 		</tr>
 	</table>
+	
+	<br/>
+		<br/>
+		<br/>
+		<br/>
+		
+	
 	
 	
 	<script type="text/javascript" src="materialize/js/materialize.js"></script>

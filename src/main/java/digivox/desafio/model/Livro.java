@@ -1,6 +1,7 @@
 package digivox.desafio.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,7 +22,56 @@ public class Livro implements Serializable{
 	
 	private String nome;
 	private String genero;
+	private String dataAquisicao = "";
+	private String dataEntrega = "";
+	private Long clienteId;
+	private Double valor = 0.0;
+		
+	public Livro() {
+		super();
+		
+
+	}
 	
+	
+	public Double getValor() {
+		return valor;
+	}
+
+	public void setValor(Double valor) {
+		this.valor = valor;
+	}
+
+
+
+
+
+	public String getDataAquisicao() {
+		return dataAquisicao;
+	}
+
+
+	public void setDataAquisicao(String dataAquisicao) {
+		this.dataAquisicao = dataAquisicao;
+	}
+
+
+	public String getDataEntrega() {
+		return dataEntrega;
+	}
+
+
+	public void setDataEntrega(String dataEntrega) {
+		this.dataEntrega = dataEntrega;
+	}
+
+
+	public Long getClienteId() {
+		return clienteId;
+	}
+	public void setClienteId(Long clienteId) {
+		this.clienteId = clienteId;
+	}
 	
 	public Long getId() {
 		return id;
